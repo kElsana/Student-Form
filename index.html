@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <!-- Tailwind css CDN LINK -->
+     <link href="
+      https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+      " rel="stylesheet">
+</head>
+<style>
+  @media (max-width: 640px) {
+    table {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<body>
+    <section class="container bg-blue-100 p-6 rounded shadow-md w-full max-w-2xl m-6 mx-auto ">
+        <h1 class="text-2xl font-bold text-center mb-4">Student Form</h1>
+        <form class="space-y-4">
+            <table>
+                <tbody >
+            <tr>
+                <td class="sm:w-1/4 font-medium mb1 sm:mb-0"><label>Name: </label></td>
+                <td><input type="text" placeholder="Enter you Name" id="inputName" class="border border-gray-300 p-2 m-4 ml-6 focus:outline-none rounded w-full sm:w-4/8"></td>
+            </tr>
+            <tr>
+                <td class="sm:w-1/4 font-medium mb1 sm:mb-0"><label>Age: </label></td>
+                <td><input type="number" placeholder="Enter you Age" id="inputAge" class="border  border-gray-300 p-2 m-4 ml-6 focus:outline-none rounded w-full sm:w-4/8"></td>
+            </tr>
+            <tr>
+                <td class="sm:w-1/4 font-medium mb1 sm:mb-0"><label>Gender: </label></td>
+                <td><input name="gender" class="mr-1" type="radio">Male <input name="gender" class="mr-1" type="radio">Female</td>
+            </tr>
+            <tr>
+                <td class="sm:w-1/4 font-medium mb1 sm:mb-0">Course: </td>
+                <td>
+                    <select id="inputCourse" class="border border-gray-300 p-2 m-4 ml-6 focus:outline-none rounded w-full sm:w-4/8">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java" >Java</option>
+                    <option value="Aws" >Aws</option>
+                    <option value="Develops">Develops</option>
+                    <option value="python">python</option>
+                    <option value="Data Structure">Data Structure</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="sm:w-1/4 font-medium mb1 sm:mb-0"><label>E-mail: </label></td>
+                <td><input id="inputEmail" type="email" placeholder="Enter your Email"class="border border-gray-300 p-2 m-4 ml-6 focus:outline-none rounded w-full sm:w-4/8" ></td>
+            </tr>
+            </tbody>
+            </table>
+        </form>
+        <button class="bg-blue-500 mt-4 ml-8 text-white px-6 py-2 rounded hover:bg-blue-600 transition font-medium" id="save">Save</button> 
+    </section>
+    <table id="studentTable" class="mt-8 mx-auto border-collapse border border-gray-300 w-full max-w-4xl hidden ">
+        <thead>
+            <tr class="bg-blue-100">
+            <th class="border border-gray-300 p-2">Name</th>
+            <th class="border border-gray-300 p-2">Age</th>
+            <th class="border border-gray-300 p-2">Gender</th>
+            <th class="border border-gray-300 p-2">Course</th>
+            <th class="border border-gray-300 p-2">Email</th>
+            <th class="border border-gray-300 p-2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be added here -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
